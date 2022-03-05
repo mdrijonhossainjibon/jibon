@@ -1,0 +1,145 @@
+.pg-code-verification {
+  width: 100%;
+
+  &__label {
+    color: var(--secondary-contrast-cta-color);
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  &__block {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    &__content {
+      margin-right: 18px;
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      align-items: center;
+      background: var(--input-background-color);
+      border: 1px solid var(--input-border-color);
+      border-radius: 4px;
+      color: var(--text-color);
+      cursor: pointer;
+      display: flex;
+      font-size: 14px;
+      font-weight: bold;
+      height: 50px;
+      justify-content: space-around;
+      margin: 0 3px;
+      width: 50px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:nth-child(3) {
+        margin-right: 9px;
+      }
+
+      &:nth-child(4) {
+        margin-left: 9px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &-placeholder {
+        color: var(--text-color-opacity-12);
+        font-weight: normal;
+
+        &-border {
+          background: var(--body-background-color);
+          border: 2px solid var(--primary-cta-color);
+          border-radius: 4px;
+        }
+
+        &-border-hidden {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  &__input {
+    height: 50px;
+    margin-top: -50px;
+    width: 100%;
+
+    input {
+      height: 50px;
+      opacity: 0;
+      width: 100%;
+    }
+  }
+
+  &__paste {
+    border: 1px solid var(--secondary-contrast-cta-color-level-4);
+    border-radius: 4px;
+    color: var(--secondary-contrast-cta-color);
+    cursor: pointer;
+    display: flex;
+    font-weight: bolder;
+    height: 40px;
+    justify-content: center;
+    padding: 11px 16px;
+
+    &:hover {
+      background: var(--button-secondary-cta-background-color-hover);
+      color: var(--button-secondary-cta-text-color-hover);
+      transition: 0.2s;
+
+      svg {
+        path {
+          fill: var(--button-secondary-cta-text-color-hover);
+          transition: 0.2s;
+        }
+      }
+    }
+
+    svg {
+      margin-right: 7px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pg-code-verification {
+    &__wrapper {
+      &-item {
+        height: 40px;
+        margin: 0 0 0 8px;
+        width: 40px;
+      }
+    }
+
+    &__input {
+      height: 56px;
+
+      input {
+        height: 40px;
+      }
+    }
+
+    &__paste {
+      font-size: 12px;
+      margin-left: 8px;
+      margin-top: -6px;
+    }
+
+    &__block {
+      &__content {
+        margin-right: unset;
+      }
+    }
+  }
+}
